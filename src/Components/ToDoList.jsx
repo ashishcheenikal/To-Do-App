@@ -2,12 +2,12 @@ import React from 'react'
 import ToDos from './ToDos'
 import './ToDoList.css'
 
-function ToDoList({ ToDo,setToDo }) {
+function ToDoList({ ToDo,setToDo,FilterTodos }) {
   return (
     <div className='todo-container'>
       <ul className='todo-list'>
         {
-          ToDo.map((todo) => (
+          FilterTodos.map((todo) => (
             <ToDos
               ToDo={ToDo}
               setToDo={setToDo}

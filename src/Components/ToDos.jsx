@@ -3,14 +3,13 @@ import './ToDos.css'
 
 function ToDos({ ToDo, setToDo,todo }) {
     const deleteToDos = () => {
-        console.log('asdf');
         setToDo(ToDo.filter((elem)=>(
             elem.id !== todo.id
         )))
     }
     const completeHandler = () => {
         setToDo(ToDo.map((elem)=>{
-            if(elem.id == todo.id){
+            if(elem.id === todo.id){
                 return {
                     ...elem,completed : !elem.completed
                 }
